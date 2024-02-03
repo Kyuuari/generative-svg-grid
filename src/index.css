@@ -20,6 +20,7 @@ body {
 
   svg {
     width: 100%;
+    height: 80%;
     aspect-ratio: 1;
   }
 
@@ -30,9 +31,9 @@ body {
 }
 
 .button {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 0;
   background: #000000;
   border: 0.5px solid #555555cc;
@@ -42,7 +43,7 @@ body {
   align-items: center;
   justify-content: center;
   border: none;
-  gap: 0.25rem;
+  /* gap: 0.25rem; */
   font-weight: 600;
   color: #ffffff;
   font-size: 0.75rem;

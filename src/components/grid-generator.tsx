@@ -71,8 +71,8 @@ const GridGenerator = () => {
 
     gsap.fromTo(
       ".container > svg",
-      { opacity: 0, scale: 0.8 },
-      { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.7)" }
+      { opacity: 0, scale: 0.2 },
+      { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" }
     );
   };
 
@@ -111,7 +111,7 @@ const GridGenerator = () => {
     //   // drawLetterBlock,
     // ];
 
-    let prevSquareSize = squareSize;
+    const prevSquareSize = squareSize;
 
     // Random multiplier (2 or 3 squares)
     const multiplier = random([2, 3]);
@@ -128,7 +128,7 @@ const GridGenerator = () => {
   }
 
   function getTwoColors(colors: string[]) {
-    let colorList = [...colors];
+    const colorList = [...colors];
     const colorIndex = random(0, colorList.length - 1, true);
     const background = colorList[colorIndex];
     // Remove that color from the options
@@ -203,8 +203,7 @@ const GridGenerator = () => {
         style={{ right: 0 }}
         aria-label="Regenerate"
         type="button"
-        onClick={generateNewGrid}
-      >
+        onClick={generateNewGrid}>
         Regenerate
       </button>
       <button
@@ -212,8 +211,7 @@ const GridGenerator = () => {
         style={{ left: 0 }}
         aria-label="Regenerate"
         type="button"
-        onClick={handleDownload}
-      >
+        onClick={handleDownload}>
         Download SVG
       </button>
       <button
@@ -221,8 +219,7 @@ const GridGenerator = () => {
         aria-label="Regenerate"
         type="button"
         style={{ left: "50%", transform: "translateX(-50%)" }}
-        onClick={handleCopy}
-      >
+        onClick={handleCopy}>
         Copy SVG
       </button>
     </>
